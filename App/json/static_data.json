@@ -1,0 +1,37 @@
+{
+  "type": "success",
+  "value": [
+    {
+      "id": 1,
+      "joke": "I bet a friend of mine he couldn’t give up origami for a week. He soon folded.",
+      "categories": []
+    },
+    {
+      "id": 2,
+      "joke": "How can you tell a worm’s head from it’s ass? Put it in a bowl of flour and wait till it farts.",
+      "categories": [
+        "explicit"
+      ]
+    },
+    {
+      "id": 3,
+      "joke": "If you start choking on food, a good swallow of cold lager is a medically proven cure.  Some may know it as the Heinekin maneuver.",
+      "categories": []
+    },
+    {
+      "id": 4,
+      "joke": "I burnt my Hawaiian pizza last night... I should've put it on aloha setting.",
+      "categories": []
+    },
+    {
+      "id": 5,
+      "joke": "I dreamed about drowning in an ocean made out of orange soda last night. It took me a while to work out it was just a Fanta sea.",
+      "categories": []
+    },
+    {
+      "id": 6,
+      "joke": "Why are pirates called pirates? Because they Arrrrrrrgggghhhhh",
+      "categories": []
+    },
+  ]
+}
