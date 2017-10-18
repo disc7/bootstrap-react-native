@@ -16,7 +16,6 @@ export default class App extends React.Component {
       'droid-sans': require('./assets/fonts/DroidSans-Regular.ttf'),
     });
     this.setState({ fontsLoaded: true });
-    console.log('async componentDidMount')
   }
   handlePress() {
     console.log('handlePress')
@@ -29,7 +28,9 @@ export default class App extends React.Component {
             this.state.fontsLoaded ? <Text style={styles.textTitleBold}>DAD JOKES <Text style={styles.textTitle}>APP</Text></Text> : null
           }
         </View>
-        <View style={styles.boxMiddle} />
+        <View style={styles.boxMiddle}>
+          <TinderCards />
+        </View>
         <View style={styles.boxBottom}>
           <View style={styles.boxBottomContainer}>
             <TouchableHighlight onPress={this.handlePress} style={styles.buttonHighlight}>

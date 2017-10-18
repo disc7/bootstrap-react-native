@@ -40,7 +40,7 @@ export class NoMoreCards extends React.Component {
   render() {
     return (
       <View style={styles.card}>
-        <Text>More jokes tomorrow</Text>
+        <Text style={styles.text}>More jokes tomorrow</Text>
       </View>
     );
   }
@@ -49,22 +49,27 @@ export class NoMoreCards extends React.Component {
 const styles = StyleSheet.create({
   card: {
     flex: 1,
-    width: 300,
-    height: 300,
+    minWidth: 340,
+    maxWidth: 350,
     borderRadius: 10,
     borderColor: 'green',
     borderWidth: 3,
-    alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden'
+    // alignItems: 'flex-start',
+    // alignItems: 'flex-end',
+    alignItems: 'center',
+    marginTop: 15,
+    marginBottom: 15,
   },
   text: {
-    fontSize: 40,
-    paddingTop: 10,
-    paddingBottom: 10
+    fontSize: 20,
+    padding: 10,
   },
   noMoreCards: {
     flex: 1,
+    borderRadius: 10,
+    borderColor: 'red',
+    borderWidth: 3,
     justifyContent: 'center',
     alignItems: 'center',
   }
