@@ -30,7 +30,7 @@ export class Card extends React.Component {
   render() {
     return (
       <View style={styles.card}>
-        <Text>{this.props.joke}</Text>
+        <Text style={styles.text}>{this.props.joke}</Text>
       </View>
     );
   }

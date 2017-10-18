@@ -1,15 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
-import Input from './components/input/Input.js';
+import api from './components/data/api.js';
 import TinderCards from './components/tinder/Tinder.js';
 import { Font } from 'expo';
 
 export default class App extends React.Component {
-  state = {
-    fontsLoaded: false,
-    value: '',
-    jokes: []
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      fontsLoaded: false,
+      value: '',
+      jokes: []
+    }
   }
+
+  async componentWillMount() {
+    data = api.fetchData().then(function(data){
+      this.setState({jokes: data})
+    }.bind(this));
+  }
+
   async componentDidMount() {
     await Font.loadAsync({
       'droid-sans-bold': require('./assets/fonts/DroidSans-Bold.ttf'),
@@ -17,9 +28,7 @@ export default class App extends React.Component {
     });
     this.setState({ fontsLoaded: true });
   }
-  handlePress() {
-    console.log('handlePress')
-  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -29,7 +38,9 @@ export default class App extends React.Component {
           }
         </View>
         <View style={styles.boxMiddle}>
-          <TinderCards />
+          <TinderCards
+            jokes={this.state.jokes}
+          />
         </View>
         <View style={styles.boxBottom}>
           <View style={styles.boxBottomContainer}>
@@ -46,6 +57,10 @@ export default class App extends React.Component {
         </View>
       </View>
     );
+  }
+
+  handlePress() {
+    console.log('handlePress')
   }
 }
 
