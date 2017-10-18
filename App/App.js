@@ -25,6 +25,7 @@ export default class App extends React.Component {
     await Font.loadAsync({
       'droid-sans-bold': require('./assets/fonts/DroidSans-Bold.ttf'),
       'droid-sans': require('./assets/fonts/DroidSans-Regular.ttf'),
+      'hate-comic-sans': require('./assets/fonts/KeyComic.ttf'),
     });
     this.setState({ fontsLoaded: true });
   }
@@ -40,6 +41,7 @@ export default class App extends React.Component {
         <View style={styles.boxMiddle}>
           <TinderCards
             jokes={this.state.jokes}
+            fontsLoaded={this.state.fontsLoaded}
           />
         </View>
         <View style={styles.boxBottom}>
