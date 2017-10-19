@@ -25,7 +25,7 @@ export default class App extends React.Component {
     await Font.loadAsync({
       'droid-sans-bold': require('./assets/fonts/DroidSans-Bold.ttf'),
       'droid-sans': require('./assets/fonts/DroidSans-Regular.ttf'),
-      'hate-comic-sans': require('./assets/fonts/KeyComic.ttf'),
+      'superfruitFont': require('./assets/fonts/superfruit.ttf'),
     });
     this.setState({ fontsLoaded: true });
   }

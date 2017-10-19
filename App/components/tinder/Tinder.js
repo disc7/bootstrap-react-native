@@ -5,11 +5,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 
 export default class TinderCards extends React.Component {
-  handleLikeJoke() {
-    console.log('Yep')
+  handleLikeJoke(card) {
+    console.log(`Yup for ${card.text}`)
   }
-  handleDoesntLikeJoke() {
-    console.log('Nope')
+  handleDoesntLikeJoke(card) {
+    console.log(`Nope for ${card.text}`)
   }
   render() {
     return (
@@ -59,12 +59,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // alignItems: 'flex-start',
     // alignItems: 'flex-end',
-    alignItems: 'center',
+    // alignItems: 'center',
     marginTop: 15,
     marginBottom: 15,
   },
   text: {
-    fontFamily: 'hate-comic-sans',
+    fontFamily: 'superfruitFont',
+    // textAlign: 'right',
     lineHeight: fontSizeAndLineHeight,
     textShadowRadius: 3,
     textShadowOffset: {
