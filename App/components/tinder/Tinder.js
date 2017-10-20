@@ -5,28 +5,34 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 
 export default React.createClass({
-  handleYup (card) {
+  handleYup (event) {
     console.log(`Yup`)
   },
-  handleNope (card) {
+  handleNope (event) {
     console.log(`Nope`)
+  },
+  renderYup (event) {
+    console.log(`renderYup ${event}`)
+  },
+  renderNope (event) {
+    console.log(`renderNope: ${event}`)
   },
   render() {
     return (
       <SwipeCards
         cards={this.props.jokes}
-        renderCard={(jokeObject) => <Card joke={jokeObject.joke} fontsLoaded={this.props.fontsLoaded} />}
+        renderCard={(jokeData) => <Card joke={jokeData.joke} fontsLoaded={this.props.fontsLoaded} />}
         renderNoMoreCards={() => <NoMoreCards fontsLoaded={this.props.fontsLoaded} />}
         handleYup={this.handleYup}
         handleNope={this.handleNope}
+        renderYup={this.renderYup}
+        renderNope={this.renderNope}
         showYup={false}
         showNope={false}
       />
     )
   }
 })
-
-
 
 export class Card extends React.Component {
   render() {

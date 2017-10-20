@@ -2,35 +2,41 @@
   "type": "success",
   "value": [
     {
-      "id": 1,
-      "joke": "I bet a friend of mine he couldn’t give up origami for a week. He soon folded.",
+      "id": 0,
+      "joke": "I bet a friend of mine he couldn’t give up origami for a week. {0} He soon folded.",
+      "type": "reveal",
       "categories": []
     },
     {
-      "id": 2,
-      "joke": "How can you tell a worm’s head from it’s ass? Put it in a bowl of flour and wait till it farts.",
+      "id": 1,
+      "joke": "{0} How can you tell a worm’s head from it’s ass? {1} Put it in a bowl of flour and wait till it farts.",
+      "type": "qa",
       "categories": [
         "explicit"
       ]
     },
     {
+      "id": 2,
+      "joke": "If you start choking on food, a good swallow of cold lager is a medically proven cure. {0} Some may know it as the Heinekin maneuver.",
+      "type": "reveal",
+      "categories": []
+    },
+    {
       "id": 3,
-      "joke": "If you start choking on food, a good swallow of cold lager is a medically proven cure.  Some may know it as the Heinekin maneuver.",
+      "joke": "I burnt my Hawaiian pizza last night... {0} I should've put it on aloha setting.",
+      "type": "reveal",
       "categories": []
     },
     {
       "id": 4,
-      "joke": "I burnt my Hawaiian pizza last night... I should've put it on aloha setting.",
+      "joke": "I dreamed about drowning in an ocean made out of orange soda last night. {0} It took me a while to work out it was just a Fanta sea.",
+      "type": "reveal",
       "categories": []
     },
     {
       "id": 5,
-      "joke": "I dreamed about drowning in an ocean made out of orange soda last night. It took me a while to work out it was just a Fanta sea.",
-      "categories": []
-    },
-    {
-      "id": 6,
-      "joke": "Why are pirates called pirates? Because they Arrrrrrrgggghhhhh",
+      "joke": "{0} Why are pirates called pirates? {1} Because they Arrrrrrrgggghhhhh",
+      "type": "qa",
       "categories": []
     },
   ]

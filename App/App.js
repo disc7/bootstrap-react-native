@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 import api from './components/data/api.js';
+import resourceStrings from './components/consts/ResourceStrings.js';
 import TinderCards from './components/tinder/Tinder.js';
 import { Font } from 'expo';
 
