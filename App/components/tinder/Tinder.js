@@ -1,30 +1,32 @@
 'use strict';
 
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 
-export default class TinderCards extends React.Component {
-  handleLikeJoke(card) {
-    console.log(`Yup for ${card.text}`)
-  }
-  handleDoesntLikeJoke(card) {
-    console.log(`Nope for ${card.text}`)
-  }
+export default React.createClass({
+  handleYup (card) {
+    console.log(`Yup`)
+  },
+  handleNope (card) {
+    console.log(`Nope`)
+  },
   render() {
     return (
       <SwipeCards
         cards={this.props.jokes}
         renderCard={(jokeObject) => <Card joke={jokeObject.joke} fontsLoaded={this.props.fontsLoaded} />}
         renderNoMoreCards={() => <NoMoreCards fontsLoaded={this.props.fontsLoaded} />}
-        handleYep={this.handleLikeJoke}
-        handleNope={this.handleDoesntLikeJoke}
+        handleYup={this.handleYup}
+        handleNope={this.handleNope}
         showYup={false}
         showNope={false}
       />
-    );
+    )
   }
-}
+})
+
+
 
 export class Card extends React.Component {
   render() {
@@ -40,7 +42,7 @@ export class NoMoreCards extends React.Component {
   render() {
     return (
       <View style={styles.card}>
-        { this.props.fontsLoaded ? <Text style={styles.text}>More jokes tomorrow...</Text> : null }
+        { this.props.fontsLoaded ? <Text style={styles.text}>More dad jokes tomorrow...</Text> : null }
       </View>
     );
   }
@@ -50,6 +52,8 @@ let fontSizeAndLineHeight = 40
 const styles = StyleSheet.create({
   card: {
     flex: 1,
+    width: 340,
+    height: 340,
     minWidth: 340,
     maxWidth: 350,
     borderRadius: 10,
