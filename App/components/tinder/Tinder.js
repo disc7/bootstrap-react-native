@@ -3,6 +3,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
+import { replaceMarker } from '../consts/ResourceStrings.js';
 
 export default React.createClass({
   handleYup (event) {
@@ -21,7 +22,7 @@ export default React.createClass({
     return (
       <SwipeCards
         cards={this.props.jokes}
-        renderCard={(jokeData) => <Card joke={jokeData.joke} fontsLoaded={this.props.fontsLoaded} />}
+        renderCard={(cardData) => <Card joke={replaceMarker(cardData.joke, cardData.type)} fontsLoaded={this.props.fontsLoaded} />}
         renderNoMoreCards={() => <NoMoreCards fontsLoaded={this.props.fontsLoaded} />}
         handleYup={this.handleYup}
         handleNope={this.handleNope}
